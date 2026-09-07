@@ -1,1 +1,1 @@
-# MillieandCo.github.io
+# Millie & Co.
