@@ -1,3 +1,56 @@
-theme: jekyll-theme-minimal
-title: Millie & Co.
-description: DP <3 MP
+# Site Settings
+title: "Millie & Co."
+description: "Cat care guides and top-rated cat products, curated by Millie."
+url: "https://millieandco.github.io"
+baseurl: ""
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"  # try "air", "contrast", or "dark" too
+
+# Plugins (required for remote_theme + collections + feeds)
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  care_guides:
+    output: true
+    permalink: /care-guides/:path/
+  products:
+    output: true
+    permalink: /products/:path/
+
+# Default layouts (so you don't set 'layout' manually on every post)
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+  - scope:
+      path: ""
+      type: care_guides
+    values:
+      layout: single
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: single
+
+# Footer links
+footer:
+  links:
+    - label: "Affiliate Disclosure"
+      url: "/disclosure/"
+    - label: "Privacy Policy"
+      url: "/privacy/"
+    - label: "Instagram"
+      url: "https://instagram.com/YOURHANDLE"
+
+markdown: kramdown
