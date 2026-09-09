@@ -1,0 +1,9 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Cat Care Guides"
+    url: /care-guides/
+  - title: "Product Reviews"
+    url: /products/
+  - title: "About"
+    url: /about/
