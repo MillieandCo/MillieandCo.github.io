@@ -1,102 +1,80 @@
----
----
+/* ===== Product Review Page Styling ===== */
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes";
-
-/* ===== Millie & Co. — Meowingtons-inspired palette ===== */
-:root {
-  --blush: #F79494;
-  --blush-dark: #E67979;
-  --soft-cream: #FFFBF8;
-  --charcoal: #3A3A3A;
-  --gold-accent: #F2C14E;
+/* Specs table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
-
-body {
-  background-color: var(--soft-cream);
-  color: var(--charcoal);
-  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-}
-
-/* Masthead */
-.masthead {
-  background-color: #ffffff;
-  border-bottom: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
-.masthead__menu-item a {
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  color: var(--charcoal);
-}
-.masthead__menu-item a:hover {
-  color: var(--blush-dark);
-}
-
-.site-title {
-  color: var(--blush-dark) !important;
-  font-weight: 800;
-}
-
-/* Links */
-a { color: var(--blush-dark); }
-a:hover { color: var(--charcoal); }
-
-/* Buttons */
-.btn--primary {
+table th {
   background-color: var(--blush);
-  border-color: var(--blush);
-  border-radius: 30px;
+  color: white;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
 }
-.btn--primary:hover {
-  background-color: var(--blush-dark);
-}
-
-/* Product/guide cards — big, soft, rounded (Meowingtons product-grid feel) */
-.archive__item {
+table td {
   background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-  padding: 1.25rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f2e6e6;
 }
-.archive__item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-}
-.archive__item-title a {
-  color: var(--charcoal);
-  font-weight: 700;
-}
-.archive__item-title a:hover {
-  color: var(--blush-dark);
+table tr:last-child td {
+  border-bottom: none;
 }
 
-/* Category pills */
-.page__taxonomy-item, .taxonomy__index a {
+/* Pros / Cons boxes */
+.pros-cons-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.pros-box, .cons-box {
+  flex: 1;
+  min-width: 220px;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+}
+.pros-box {
+  background-color: #FFF3F3;
+  border: 1px solid var(--blush);
+}
+.cons-box {
+  background-color: #FAFAFA;
+  border: 1px solid #ddd;
+}
+.pros-box h4 { color: var(--blush-dark); margin-top: 0; }
+.cons-box h4 { color: #888; margin-top: 0; }
+.pros-box ul, .cons-box ul { padding-left: 1.2rem; }
+
+/* Buy Now button */
+.buy-now-btn {
+  display: inline-block;
   background-color: var(--gold-accent);
   color: var(--charcoal);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(242, 193, 78, 0.4);
+  transition: transform 0.15s ease;
 }
-
-/* Footer */
-.page__footer {
-  background-color: #ffffff;
-  border-top: 1px solid #eee;
+.buy-now-btn:hover {
+  transform: translateY(-2px);
   color: var(--charcoal);
 }
-.page__footer a {
-  color: var(--blush-dark);
+
+/* Star rating display */
+.star-rating {
+  color: var(--gold-accent);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
 }
