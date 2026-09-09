@@ -4,92 +4,99 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* ===== Millie & Co. Custom Colors ===== */
+/* ===== Millie & Co. — Meowingtons-inspired palette ===== */
 :root {
-  --coral: #FF6F61;
-  --teal: #2EC4B6;
-  --sunny-yellow: #FFC857;
-  --cream: #FFF8F0;
-  --charcoal: #2B2B2B;
+  --blush: #F79494;
+  --blush-dark: #E67979;
+  --soft-cream: #FFFBF8;
+  --charcoal: #3A3A3A;
+  --gold-accent: #F2C14E;
 }
 
 body {
-  background-color: var(--cream);
+  background-color: var(--soft-cream);
   color: var(--charcoal);
+  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Masthead / top nav bar */
+/* Masthead */
 .masthead {
   background-color: #ffffff;
-  border-bottom: 3px solid var(--coral);
+  border-bottom: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .masthead__menu-item a {
   font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
   color: var(--charcoal);
 }
-
 .masthead__menu-item a:hover {
-  color: var(--coral);
+  color: var(--blush-dark);
 }
 
-/* Site title/logo text */
 .site-title {
-  color: var(--coral) !important;
+  color: var(--blush-dark) !important;
   font-weight: 800;
 }
 
 /* Links */
-a {
-  color: var(--teal);
-}
-a:hover {
-  color: var(--coral);
-}
+a { color: var(--blush-dark); }
+a:hover { color: var(--charcoal); }
 
-/* Buttons (e.g. "Buy Now" / "Read More") */
+/* Buttons */
 .btn--primary {
-  background-color: var(--coral);
-  border-color: var(--coral);
+  background-color: var(--blush);
+  border-color: var(--blush);
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.75rem;
 }
 .btn--primary:hover {
-  background-color: darken(#FF6F61, 10%);
+  background-color: var(--blush-dark);
 }
 
-/* Card / archive grid items (used on care-guides and products pages) */
+/* Product/guide cards — big, soft, rounded (Meowingtons product-grid feel) */
 .archive__item {
   background-color: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  padding: 1rem;
-  transition: transform 0.15s ease;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .archive__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
-
 .archive__item-title a {
   color: var(--charcoal);
+  font-weight: 700;
 }
 .archive__item-title a:hover {
-  color: var(--coral);
+  color: var(--blush-dark);
 }
 
-/* Category/tag pills */
+/* Category pills */
 .page__taxonomy-item, .taxonomy__index a {
-  background-color: var(--sunny-yellow);
+  background-color: var(--gold-accent);
   color: var(--charcoal);
   border-radius: 20px;
-  padding: 4px 12px;
-  font-size: 0.8rem;
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* Footer */
 .page__footer {
-  background-color: var(--charcoal);
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+  color: var(--charcoal);
 }
 .page__footer a {
-  color: var(--sunny-yellow);
+  color: var(--blush-dark);
 }
